@@ -1,0 +1,48 @@
+h3 {
+    font-size: 18px !important;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px !important;
+}
+
+h4 {
+    display: flex;
+    justify-content: center;
+    color: rgb(255,204,1)!important;
+    text-shadow: 
+        -1px -1px 0 rgb(49,102,177),
+        1px -1px 0 rgb(49,102,177),
+        -1px 1px 0 rgb(49,102,177),
+        1px 1px 0 rgb(49,102,177);
+    font-weight: bold;
+}
+
+h5 {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+b {
+    font-size: 24px;
+}
+
+p {
+    margin: 0;
+}
+#search-message {
+    border: 3px dotted red !important;
+  border-style: none none dotted;
+  color: red;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  font-size: large;
+  padding-top: 2px;
+}
+
+hr {
+  border: 3px dotted rgb(13, 57, 117) !important;
+  border-style: none none dotted;
+  color: #fff;
+  padding-top: 2px;
+  opacity: 0.4;
+}
