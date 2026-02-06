@@ -19,7 +19,7 @@ function filterPokemons(searchTerm, allPokemon, display) {
     pokemon.name.toLowerCase().includes(searchTerm)
   );
   if (currentPokemon.length === 0) {
-    display.innerHTML = "<p>Keine Pokémon gefunden</p>";
+    display.innerHTML = "<p id='search-message'>Keine Pokémon gefunden</p>";
   } else {
     renderAllPokemonCards(currentPokemon);
   }
