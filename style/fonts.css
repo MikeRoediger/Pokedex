@@ -30,7 +30,7 @@ p {
     margin: 0;
 }
 #search-message {
-    border: 3px dotted red !important;
+  border: 3px dotted red !important;
   border-style: none none dotted;
   color: red;
   background-color: rgba(255, 255, 255, 0.5);
