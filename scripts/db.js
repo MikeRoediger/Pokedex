@@ -1,36 +1,3 @@
-
-/**
- * Global variables and constants used in the Pokedex application.
- * 
- * Variables:
- * - `allPokemon` {Array}: Array to store all fetched Pokémon data.
- * - `offset` {number}: Offset for paginated API requests.
- * - `isLoading` {boolean}: Flag to indicate if data is currently being loaded.
- * - `currentPokemon` {Array}: Array to store the currently displayed Pokémon data.
- * - `currentPokemonIndex` {number}: Index of the currently selected Pokémon.
- * - `globalEvolutions` {Array}: Array to store evolution data for Pokémon.
- * - `currentFilter` {Object}: Object to store the current filter settings.
- *   - `type` {string|null}: The selected Pokémon type filter.
- *   - `generation` {string|null}: The selected Pokémon generation filter.
- * - `pokemonTypes` {Array}: Array to store available Pokémon types.
- * - `pokemonGenerations` {Array}: Array to store available Pokémon generations.
- * - `filteredPokemons` {Array}: Array to store Pokémon filtered by the current filter.
- * - `searchTimeout` {number|undefined}: Timeout ID for debounced search functionality.
- * 
- * Audio:
- * - `AUDIO_openPkmn` {Audio}: Audio object for opening Pokémon overlay sound.
- * - `AUDIO_nextPkmn` {Audio}: Audio object for navigating to the next Pokémon sound.
- * - `AUDIO_closeOverlay` {Audio}: Audio object for closing overlay sound.
- * - `soundtracks` {Array}: Array of file paths for background music tracks.
- * - `currentTrackIndex` {number}: Index of the currently playing background music track.
- * - `AUDIO_backgroundMusic` {Audio}: Audio object for background music.
- *   - `loop` {boolean}: Indicates if the background music should loop.
- *   - `volume` {number}: Volume level of the background music.
- * 
- * Constants:
- * - `typeColors` {Object}: Object mapping Pokémon types to their corresponding gradient colors.
- * - `typeIcons` {Object}: Object mapping Pokémon types to their corresponding icon file paths.
- */
 let allPokemon = [];
 let offset = 0;
 let isLoading = false;

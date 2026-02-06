@@ -1,11 +1,3 @@
-/**
- * Rendert die Statistik-Balken für ein Pokémon basierend auf dessen Werten und den maximalen Werten aller Pokémon.
- *
- * @function renderStatsBars
- * @param {Object} pokemon - Das Pokémon, dessen Statistiken angezeigt werden sollen.
- * @param {Array} allPokemonStats - Eine Liste aller Pokémon-Statistiken, um maximale Werte zu berechnen.
- * @returns {void}
- */
 function renderStatsBars(pokemon, allPokemonStats) {
   const chartContainer = document.querySelector('.stats-bar-chart');
   chartContainer.innerHTML = '';
@@ -29,29 +21,11 @@ function renderStatsBars(pokemon, allPokemonStats) {
   chartContainer.innerHTML = chartHTML;
 }
 
-/**
- * Erstellt eine einzelne Statistik-Gruppe (einen Balken) für ein bestimmtes Attribut eines Pokémon.
- *
- * @function renderStatGroup
- * @param {string} labelText - Der Name des Attributs (z. B. "HP").
- * @param {number} statValue - Der Wert des Attributs für das Pokémon.
- * @param {number} maxValue - Der maximale Wert dieses Attributs unter allen Pokémon.
- * @param {number} maxScale - Der höchste Wert aller Attribute (für die Skalierung).
- * @param {string} color - Die Farbe des Balkens.
- * @returns {string} - HTML für die Statistik-Gruppe.
- */
 function renderStatGroup(labelText, statValue, maxValue, maxScale, color) {
   const pokemonBarWidth = (statValue / maxScale) * 100;
   return statBarTemplate(labelText, statValue, maxValue, pokemonBarWidth, color);
 }
 
-/**
- * Erstellt leere Statistik-Balken für die angegebenen Labels.
- *
- * @function renderEmptyStatsBars
- * @param {Array} labels - Eine Liste von Attributnamen (z. B. ["HP", "Angriff"]).
- * @returns {string} - HTML für die leeren Statistik-Balken.
- */
 function renderEmptyStatsBars(labels) {
   let emptyStatsHTML = '';
   for (let i = 0; i < labels.length; i++) {
@@ -60,13 +34,6 @@ function renderEmptyStatsBars(labels) {
   return emptyStatsHTML;
 }
 
-/**
- * Berechnet die durchschnittlichen Werte für jedes Attribut basierend auf den Statistiken aller Pokémon.
- *
- * @function calculateAverageStats
- * @param {Array} allPokemonStats - Eine Liste aller Pokémon-Statistiken.
- * @returns {Array} - Durchschnittswerte für jedes Attribut.
- */
 function calculateAverageStats(allPokemonStats) {
   const totalStats = [0, 0, 0, 0, 0, 0];
   for (let i = 0; i < allPokemonStats.length; i++) {
@@ -81,13 +48,6 @@ function calculateAverageStats(allPokemonStats) {
   return averages;
 }
 
-/**
- * Berechnet die maximalen Werte für jedes Attribut basierend auf den Statistiken aller Pokémon.
- *
- * @function calculateMaxStats
- * @param {Array} allPokemonStats - Eine Liste aller Pokémon-Statistiken.
- * @returns {Array} - Maximalwerte für jedes Attribut.
- */
 function calculateMaxStats(allPokemonStats) {
   const maxStats = [0, 0, 0, 0, 0, 0];
   for (let i = 0; i < allPokemonStats.length; i++) {

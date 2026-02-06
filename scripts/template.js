@@ -1,10 +1,3 @@
-/**
- * Erstellt das HTML-Template für eine Pokémon-Karte.
- *
- * @function pokemonCardTemplate
- * @param {Object} pokemon - Das Pokémon-Objekt mit allen relevanten Daten.
- * @returns {string} - HTML-String für die Pokémon-Karte.
- */
 function pokemonCardTemplate(pokemon) {
   const pokemonType = pokemon.types[0].type.name || "Unbekannt";
   const cardColor =
@@ -39,14 +32,6 @@ function pokemonCardTemplate(pokemon) {
 `;
 }
 
-/**
- * Erstellt das HTML-Template für das Overlay eines Pokémon.
- *
- * @function overlayTemplate
- * @param {Object} pokemon - Das Pokémon-Objekt mit allen relevanten Daten.
- * @param {Array} evolutions - Eine Liste der Evolutionsdaten des Pokémon.
- * @returns {string} - HTML-String für das Pokémon-Overlay.
- */
 function overlayTemplate(pokemon, evolutions) {
   const artworkUrl = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`;
   const typeNames = getTypeText(pokemon.types);
@@ -140,13 +125,6 @@ function overlayTemplate(pokemon, evolutions) {
   `;
 }
 
-/**
- * Erstellt das HTML-Template für eine Evolution eines Pokémon.
- *
- * @function evolutionTemplate
- * @param {Object} evo - Das Evolutionsobjekt mit den relevanten Daten.
- * @returns {string} - HTML-String für die Evolution.
- */
 function evolutionTemplate(evo) {
   return `
       <div class="text-center">
@@ -160,13 +138,6 @@ function evolutionTemplate(evo) {
   `;
 }
 
-/**
- * Erstellt den Text für die Typen eines Pokémon.
- *
- * @function getTypeText
- * @param {Array} types - Eine Liste der Typen des Pokémon.
- * @returns {string} - HTML-String mit den Typen des Pokémon.
- */
 function getTypeText(types) {
   let typeText = "";
   for (let i = 0; i < types.length; i++) {
@@ -178,12 +149,6 @@ function getTypeText(types) {
   return typeText;
 }
 
-/**
- * Erstellt das HTML-Template für die Filteroptionen.
- *
- * @function filterTemplate
- * @returns {string} - HTML-String für die Filteroptionen.
- */
 function filterTemplate() {
   const typeOptions = generateTypeOptions(pokemonTypes);
   const generationOptions = generateGenerationOptions(pokemonGenerations);
@@ -210,17 +175,6 @@ function filterTemplate() {
   `;
 }
 
-/**
- * Erstellt das HTML-Template für eine Statistik-Balkengruppe.
- *
- * @function statBarTemplate
- * @param {string} labelText - Der Name des Attributs (z. B. "HP").
- * @param {number} statValue - Der Wert des Attributs für das Pokémon.
- * @param {number} maxValue - Der maximale Wert dieses Attributs unter allen Pokémon.
- * @param {number} pokemonBarWidth - Die Breite des Balkens in Prozent.
- * @param {string} color - Die Farbe des Balkens.
- * @returns {string} - HTML-String für die Statistik-Balkengruppe.
- */
 function statBarTemplate(labelText, statValue, maxValue, pokemonBarWidth, color) {
   return `
     <div class="stat-group">
@@ -233,13 +187,6 @@ function statBarTemplate(labelText, statValue, maxValue, pokemonBarWidth, color)
   `;
 }
 
-/**
- * Erstellt das HTML-Template für leere Statistik-Balken.
- *
- * @function emptyStatBarTemplate
- * @param {Array} labels - Eine Liste von Attributnamen.
- * @returns {string} - HTML-String für die leeren Statistik-Balken.
- */
 function emptyStatBarTemplate(labels) {
   return `
         <div class="stat-group">
