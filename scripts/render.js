@@ -74,4 +74,4 @@ function closePokemonOverlay() {
     
     contentWrapper.classList.remove("blur");
     document.body.style.overflow = "auto";
-};
+}

@@ -10,8 +10,6 @@ let pokemonGenerations = [];
 let filteredPokemons = [];
 let searchTimeout;
 
-
-
 const typeColors = {
     fire: "linear-gradient(135deg, #ff4500, #ff8c00, #ffd700, #ffffff)",
     water: "linear-gradient(135deg, #2196F3, #90CAF9, #BBDEFB)",
@@ -46,4 +44,4 @@ const typeIcons = {
     ice: "./assets/typeIcons/Battrio_Ice_type.png",
     flying: "./assets/typeIcons/Battrio_Flying_type.png",
     bug: "./assets/typeIcons/Battrio_Bug_type.png",
-};
+}
