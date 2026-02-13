@@ -4,55 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokédex</title>
-    <link rel="icon" href="./assets/logo/pokedex-logo.png" type="image/x-icon"/>
-    <link rel="stylesheet" href="./style/assets.css" />
-    <link rel="stylesheet" href="./style/standard.css" />
-    <link rel="stylesheet" href="./style/template.css" />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./style/fonts.css" />
-    <link rel="stylesheet" href="./style/statBar.css" />
-    <link rel="stylesheet" href="./style/overlay.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </head>
-  <body onload="init()">
-    <header id="header" class="custom-header bg-primary text-white">
-            <h1 class="m-0">
-        <a href="index.html">
-          <img src="./assets/logo/pokemon.png" class="logo" alt="logo"/>
-        </a> 
-      </h1>
-      <input id="search-bar" type="text" placeholder="Suche Pokémon..." oninput="filterAndShowPokemons(this.value)" class="form-control search-bar"/>
-    </header>
-    <main id="content-wrapper" class="container mt-4">
-      <div id="controls" class="controls"></div>
-            <div id="filter-controls" class="filter-controls"></div>
-      <div id="pokemon-display" class="pokemon-display row g-4"></div>
-      <div class="text-center mt-3">
-        <div id="load-more-button" onclick="fetchMorePokemons()" class="btn btn-warning custom-btn">
-          Mehr Pokemon laden
-        </div>
-      </div>
-      <a href="#header" class="scrollToTopBtn"><span>Top</span></a>
-    </main>
-    <div id="loading-screen" class="loading-screen d-none">
-      <img src="./assets/logo/pokeballGif.gif" alt="Lädt..." class="loading-gif"/>
-      <p>Lade Pokémon...</p>
-      <p>Bitte warten...</p>
-    </div>
-    <div id="overlay" class="custom-overlay"></div>
+  <body id="body" onload="fetchData()">
+    
     <footer class="footer">
       <p><a href="https://www.flaticon.com/de/kostenlose-icons/pokemon" title="pokémon Icons">Pokémon
             Icons by Flaticon</a></p>
         <p><a href="https://pixabay.com/images/search/pokemon%20ball/">
             Background by Pixabay</a></p>
     </footer>
-    <script src="./scripts/filter.js"></script>
-    <script src="./scripts/script.js"></script>
-    <script src="./scripts/db.js"></script>
-    <script src="./scripts/statBar.js"></script>
-    <script src="./scripts/template.js"></script>
-    <script src="./scripts/render.js"></script>
   </body>
 </html>
 
